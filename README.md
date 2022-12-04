@@ -52,4 +52,4 @@ Already Done:)
 
 ## License
 
-[MIT License](LICENSE)
+Based on [get-youtube-thumbnail](https://github.com/iqhater/get-youtube-thumbnail) by iqhater, [MIT License](LICENSE)
