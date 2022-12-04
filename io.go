@@ -2,7 +2,6 @@ package main
 
 import (
 	"errors"
-	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -47,6 +46,5 @@ func writeFile(readyFile *os.File, resp *http.Response) error {
 	}
 	resp.Body.Close()
 	readyFile.Close()
-	fmt.Println("\nAlready Done:)")
 	return nil
 }

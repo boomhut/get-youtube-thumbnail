@@ -8,7 +8,7 @@ import (
 // getUrlResponse get and check image url with two resolutions.
 // If "/maxresdefault.jpg" have a bad response or doesn't exist
 // getURLResponse try to get url with lowest or only resolution "/hqdefault.jpg".
-func (t *Thumbnail) getURLResponse() *http.Response {
+func (t *YTThumbnail) getURLResponse() *http.Response {
 
 	// two possible resolutions
 	const (

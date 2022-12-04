@@ -11,7 +11,7 @@ import (
 
 // Thumbnail struct has a three properties
 // whose get the correct url and current file names.
-type Thumbnail struct {
+type YTThumbnail struct {
 	VideoID        string
 	link           string
 	fileName       []string
@@ -22,7 +22,7 @@ type Thumbnail struct {
 // findVideoID extract video id from raw input url
 // and save it at Thumbnail struct. Also checks id length
 // and bad symbols at id sequence.
-func (t *Thumbnail) findVideoID(urlVideo string) error {
+func (t *YTThumbnail) findVideoID(urlVideo string) error {
 
 	equalIndex := strings.Index(urlVideo, "=")
 	ampIndex := strings.Index(urlVideo, "&")
@@ -57,7 +57,7 @@ func (t *Thumbnail) findVideoID(urlVideo string) error {
 
 // walkFunc checks root directory name for persist thumbnails.
 // If name does not exist, walkFunc save new name into Thumbnail struct.
-func (t *Thumbnail) walkFunc(path string, info os.FileInfo, err error) error {
+func (t *YTThumbnail) walkFunc(path string, info os.FileInfo, err error) error {
 
 	if "thumbnails" != info.Name() {
 		t.fileName = append(t.fileName, info.Name())
@@ -116,12 +116,13 @@ func setNameDigit(inputArr []string) string {
 	return "0"
 }
 
-func (t *Thumbnail) setThumbnailName() string {
-	return t.thumbnailsDir + "/thumbnail_" + setNameDigit(t.fileName) + ".jpg"
+func (t *YTThumbnail) setYTThumbnailName() string {
+	// return t.thumbnailsDir + "/thumbnail_" + setNameDigit(t.fileName) + ".jpg"
+	return t.thumbnailsDir + "/thumb_" + t.VideoID + ".jpg"
 }
 
-func NewThumbnail() *Thumbnail {
-	return &Thumbnail{
+func NewYTThumbnail() *YTThumbnail {
+	return &YTThumbnail{
 		VideoID:        "",
 		link:           "",
 		fileName:       []string{},

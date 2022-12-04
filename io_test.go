@@ -11,7 +11,7 @@ const TestDir = "./test_data"
 
 func TestCreateFile(t *testing.T) {
 
-	tmb := &Thumbnail{}
+	tmb := &YTThumbnail{}
 
 	// thumbnailsDir := "./test_data"
 	_ = createFolder(TestDir)

@@ -17,7 +17,7 @@ func TestFindVideoID(t *testing.T) {
 	// https://www.youtube.com/embed/5eNieKeLBLE												embed url
 	// https://youtu.be/6k1oE2y7NIo?t=31														timecode url
 
-	tmb := &Thumbnail{}
+	tmb := &YTThumbnail{}
 
 	urlList := []string{
 		"https://www.youtube.com/watch?v=N2wJQSBx5i4",
@@ -38,7 +38,7 @@ func TestFindVideoID(t *testing.T) {
 
 func TestFindVideoWrongID(t *testing.T) {
 
-	tmb := &Thumbnail{}
+	tmb := &YTThumbnail{}
 
 	urlList := []string{
 		"https://www.youtube.com/watch?v=N2wJ" + "?" + "SBx5i4",
@@ -56,7 +56,7 @@ func TestFindVideoWrongID(t *testing.T) {
 
 func TestFindVideoWrongIDLength(t *testing.T) {
 
-	tmb := &Thumbnail{}
+	tmb := &YTThumbnail{}
 
 	urlList := []string{
 		"https://www.youtube.com/watch?v=N2wJQ",
@@ -74,7 +74,7 @@ func TestFindVideoWrongIDLength(t *testing.T) {
 
 func TestWalkFunc(t *testing.T) {
 
-	tmb := new(Thumbnail)
+	tmb := new(YTThumbnail)
 
 	err := filepath.Walk(TestDir, tmb.walkFunc)
 	if err != nil {
@@ -114,9 +114,9 @@ func TestSetNameDigitWrongNumbers(t *testing.T) {
 
 func TestSetThumbnailNameVaild(t *testing.T) {
 
-	tmb := NewThumbnail()
+	tmb := NewYTThumbnail()
 
-	result := tmb.setThumbnailName()
+	result := tmb.setYTThumbnailName()
 
 	if len(result) == 0 {
 		t.Errorf("Empty file name! %s\n", result)
@@ -129,7 +129,7 @@ func TestNewThumbnailVaild(t *testing.T) {
 	link := ""
 	thumbnailsName := ""
 
-	result := NewThumbnail()
+	result := NewYTThumbnail()
 
 	if result == nil {
 		t.Errorf("Should be non nil struct! %v\n", result)
