@@ -1,14 +1,7 @@
 
-<h1 align="center">Get Youtube Thumbnail</h1>
+<h1 align="center">YT-Thumb</h1>
 
-[![Latest Release](https://img.shields.io/badge/Latest%20Release-v1.0.1-73C0E7.svg?style=flat-square)](https://github.com/iqhater/get-youtube-thumbnail/releases/tag/v1.0.1)
-![Tests](https://github.com/iqhater/get-youtube-thumbnail/workflows/Tests/badge.svg)
-[![go report](https://goreportcard.com/badge/github.com/iqhater/get-youtube-thumbnail?style=flat-square)](https://goreportcard.com/report/github.com/iqhater/get-youtube-thumbnail)
-
-<hr>
-
-By default, get-youtube-thumbnail gets a max resolution image, if image has been not found, get-youtube-thumbnail try to getting a high resolution image.
-
+YT-Thumb is an easy-to-use command line interface (CLI) and application programming interface (API) tool that allows users to quickly and easily obtain thumbnail images from YouTube videos. Using either the URL of the video or just the video ID, YT-Thumb can quickly retrieve a thumbnail of the video. 
 
 ## How To Install
 
@@ -16,12 +9,11 @@ There are 2 ways to install "get-youtube-thumbnail". First way is simply to down
 
 - Download ready binary for your OS:
 
-     [Latest Release](https://github.com/iqhater/get-youtube-thumbnail/releases/tag/v1.0.1)
-     <!-- https://github.com/goreleaser/goreleaser/releases/tag/v0.45.1 -->
+     [Latest Release](https://github.com/boomhut/yt-thumb/releases/tag/v1.0.3)
 
  - or use go get command:
 ```
-go get github.com\iqhater\get-youtube-thumbnail
+go get github.com\boomhut\yt-thumb
 ```
 then build your source
 ```
@@ -31,25 +23,6 @@ go build
 
 ## How to Use
 
-1. Run binary file in console. (for linux and darwin os). For windows run `get-youtube-thumbnail.exe`
-```
-./get-youtube-thumbnail
-```
-2. Paste youtube url link
-```
-$ ./get-youtube-thumbnail
-
-Enter Youtube Url: https://www.youtube.com/watch?v=glHtYwHidUY
-```
-3. Profit;) Your image saved in created "thumbnails" directory
-```
-$ ./get-youtube-thumbnail
-
-Enter Youtube Url: https://www.youtube.com/watch?v=glHtYwHidUY
-
-Already Done:)
-```
-
 ## License
-
-Based on [get-youtube-thumbnail](https://github.com/iqhater/get-youtube-thumbnail) by iqhater, [MIT License](LICENSE)
+MIT
+Based on [get-youtube-thumbnail](https://github.com/iqhater/get-youtube-thumbnail) by iqhater, © 2017, iqhater [MIT License](LICENSE)
