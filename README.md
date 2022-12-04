@@ -23,4 +23,5 @@ go build
 
 ## License
 This project is licensed under MIT License, just as the code I've built upon. 
-Based on [get-youtube-thumbnail](https://github.com/iqhater/get-youtube-thumbnail) by iqhater, © 2017, iqhater [MIT License](LICENSE)
+
+Based on [get-youtube-thumbnail](https://github.com/iqhater/get-youtube-thumbnail) by iqhater, [MIT License](https://github.com/iqhater/get-youtube-thumbnail/blob/develop/LICENSE)
